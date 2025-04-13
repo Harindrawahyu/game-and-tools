@@ -1,11 +1,13 @@
-import main
 import tkinter as tk
 from tkinter import ttk
+import main
+from utils.helper import clear_screen
+
+clear_screen()
 
 
-def start():
-    print("SELAMAT DATANG DI KALKULATOR")
-    class Calculator:
+
+class Calculator:
         def __init__(self, root):
             self.root = root
             self.root.title("Kalkulator")
@@ -59,18 +61,20 @@ def start():
             self.expression = ""
             self.result_var.set("")
 
-    if __name__ == "__main__":
-        root = tk.Tk()
-        calc = Calculator(root)
-        root.mainloop()
+def start():
+    print("======================================")
+    print("     SELAMAT DATANG DI KALKULATOR     ")
+    print("======================================\n")
+        
+    root = tk.Tk()
+    calc = Calculator(root)
+    root.mainloop()
 
-
-
-        kembali = input("\nUdahan ngitungnya? Mau kembali? [yes/no]: ")
-        if kembali == "yes": 
-            main.menu()
-        elif kembali == "no":
-            start()
-
+    kembali = input("\nUdahan ngitungnya? Ingin kembali ke menu? [y/n]: ")
+    if kembali == "y": 
+        main.menu()
+    elif kembali == "n":
+        start()
+        
 if __name__ == '__main__':
     start()
