@@ -5,7 +5,6 @@ from utils.helper import clear_screen
 
 clear_screen()
 
-
 def menu():
     while True:
         try:

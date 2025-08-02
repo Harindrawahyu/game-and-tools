@@ -5,8 +5,6 @@ from utils.helper import clear_screen
 
 clear_screen()
 
-
-
 class Calculator:
         def __init__(self, root):
             self.root = root
